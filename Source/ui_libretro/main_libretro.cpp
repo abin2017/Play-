@@ -13,7 +13,8 @@
 #include "PtrStream.h"
 #include "MemStream.h"
 
-#include <boost/filesystem.hpp>
+//#include <boost/filesystem.hpp>
+#include <ghc/filesystem.hpp>
 #include <vector>
 #include <cstdlib>
 
@@ -449,8 +450,9 @@ bool retro_load_game(const retro_game_info* info)
 {
 	CLog::GetInstance().Print(LOG_NAME, "%s\n", __FUNCTION__);
 
-	boost::filesystem::path filePath = info->path;
-	CAppConfig::GetInstance().SetPreferencePath(PREF_PS2_CDROM0_PATH, filePath);
+	//boost::filesystem::path filePath = info->path;
+	//CAppConfig::GetInstance().SetPreferencePath(PREF_PS2_CDROM0_PATH, filePath);
+	CAppConfig::GetInstance().SetPreferencePath(PREF_PS2_CDROM0_PATH, info->path);
 	CAppConfig::GetInstance().Save();
 	first_run = false;
 
