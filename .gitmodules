@@ -1,6 +1,6 @@
 [submodule "deps/Dependencies"]
 	path = deps/Dependencies
-	url = git@github.com:jpd002/Play-Dependencies.git
+	url = git@github.com:abin2017/Play-Dependencies.git
 [submodule "deps/Framework"]
 	path = deps/Framework
 	url = git@github.com:jpd002/Play--Framework.git
